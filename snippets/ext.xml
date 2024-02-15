@@ -8,4 +8,8 @@
   <project path="vendor/lineage" name="android_vendor_lineage" remote="ext" />
   <project path="packages/apps/GameSpace" name="android_packages_apps_GameSpace" remote="ext" />
 
+ <!-- crDroid additions -->
+  <project path="bionic" name="android_bionic" groups="pdk" remote="crd" />
+  <project path="external/arm-optimized-routines" name="android_external_arm-optimized-routines" groups="pdk" remote="crd" />
+
 </manifest>
