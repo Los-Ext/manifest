@@ -8,6 +8,7 @@
   <project path="vendor/lineage" name="android_vendor_lineage" remote="ext" />
   <project path="frameworks/av" name="android_frameworks_av" remote="ext" />
   <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="ext" />
+  <project path="system/core" name="android_system_core" remote="ext" />
 
  <!-- crDroid additions -->
   <project path="bionic" name="android_bionic" groups="pdk" remote="crd" />
