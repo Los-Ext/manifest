@@ -1,36 +1,38 @@
-LineageOS
-===========
+# **LineageOS - Ext**
 
-Getting started
----------------
+## **Getting Started**
 
-To get started with Android/LineageOS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
 
-To initialize your local repository using the LineageOS trees, use a command like this:
+### Initialising the Repo
+To save space, sync without history use:
 ```
-repo init -u https://github.com/LineageOS/android.git -b lineage-22.1 --git-lfs
+ repo init --depth=1 --no-repo-verify -u https://github.com/Los-Ext/manifest.git -b 15 --git-lfs -g default,-mips,-darwin,-notdefault
 ```
-Then to sync up:
+
+To sync with full history use:
 ```
-repo sync
+ repo init -u https://github.com/Los-Ext/manifest.git -b 15 --git-lfs
 ```
-Please see the [LineageOS Wiki](https://wiki.lineageos.org/) for building instructions, by device.
 
+### Sync up sources
+```
+ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune
+```
 
-Submitting patches
-------------------
-Patches are always welcome! Please submit your patches via LineageOS Gerrit!
+### Build the ROM
+```
+ . build/envsetup.sh
+ lunch lineage_<devicecodename>-<buildtype>
+ mka bacon
+```
 
-Simply follow our guide on [how to submit patches](https://wiki.lineageos.org/submitting-patch-howto.html).
+### Additional stuff (optional)
+ - To build gapps add `WITH_GMS := true` flag in your `lineage_<device>.mk`
 
-To view the status of your and others' patches, visit [LineageOS Gerrit Code Review](https://review.lineageos.org/).
+**Maintainer Overlays**
 
+ - Refer to this [change](https://github.com/ImSpiDy/device_xiaomi_lavender/commit/f4cbcc3f48c8fe9856d9f5d4e7c081461c5d6390) for maintainer  & device overlays.
 
-Buildbot
---------
+**Signed Builds**
 
-All supported devices are built weekly and periodically as changes are committed to ensure the source trees remain buildable.
-
-You can view the current build statuses at [LineageOS Buildkite](https://buildkite.com/lineageos).
-
-Builds produced weekly by the buildbot can be downloaded from [LineageOS downloads](https://download.lineageos.org/).
+ - We support inline singing, simply place your private keys in `vendor/lineage-priv/keys` directory and it'll do the rest.
