@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="ext"
+           fetch="https://github.com/Los-Ext"
+           revision="refs/heads/17" />
+
+  <remote  name="ext-gl"
+           fetch="https://gitlab.com/Los-Ext"
+           revision="refs/heads/17" />
+
+  <remote  name="ext-cb"
+           fetch="https://codeberg.org/Los-Ext"
+           revision="refs/heads/17" />
+
+  <remote  name="mtg"
+           fetch="https://github.com/MindTheGapps"
+           revision="refs/heads/cinnamonbun" />
+
+  <remote  name="evo"
+           fetch="https://github.com/Evolution-X"
+           revision="refs/heads/cnb" />
+
+  <!-- LosExt additions -->
+  <remove-project path="android" />
+  <project path="android" name="android_manifest" remote="ext" />
+
+  <remove-project path="art" />
+  <project path="art" name="android_art" remote="ext" />
+
+  <remove-project path="bionic" />
+  <project path="bionic" name="android_bionic" remote="ext" />
+
+  <remove-project path="bootable/recovery" />
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="ext" />
+
+  <remove-project path="build/make" />
+  <project path="build/make" name="android_build" groups="pdk,sysui-studio" remote="ext" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <remove-project path="build/soong" />
+  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed,sysui-studio" remote="ext" />
+
+  <remove-project path="device/lineage/sepolicy" />
+  <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="ext" />
+
+  <remove-project path="device/qcom/sepolicy-legacy-um" />
+  <project path="device/qcom/sepolicy-legacy-um" name="android_device_qcom_sepolicy" groups="qcom,sdm660" remote="ext" />
+
+  <remove-project path="external/arm-optimized-routines" />
+  <project path="external/arm-optimized-routines" name="android_external_arm-optimized-routines" groups="pdk" remote="ext" />
+
+  <remove-project path="frameworks/av" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="ext" />
+
+  <remove-project path="frameworks/base" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="ext-cb" />
+
+  <remove-project path="frameworks/libs/systemui" />
+  <project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" remote="ext" />
+
+  <remove-project path="frameworks/native" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="ext" />
+
+  <!-- <remove-project path="frameworks/opt/telephony" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" groups="pdk,sysui-studio" remote="ext" /> -->
+
+  <remove-project path="hardware/interfaces" />
+  <project path="hardware/interfaces" name="android_hardware_interfaces" groups="pdk,sysui-studio" remote="ext" />
+
+  <remove-project path="lineage-sdk" />
+  <project path="lineage-sdk" name="android_lineage-sdk" remote="ext" />
+
+  <remove-project path="packages/apps/LineageParts" />
+  <project path="packages/apps/LineageParts" name="android_packages_apps_LineageParts" remote="ext" />
+
+  <remove-project path="packages/apps/Launcher3" />
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="ext" />
+
+  <remove-project path="packages/apps/Settings" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="ext" />
+  <project path="packages/apps/Settings/ext" name="android_packages_apps_Settings_ext" remote="ext" />
+
+  <remove-project path="packages/apps/ThemePicker" />
+  <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="ext" />
+
+  <!-- <remove-project path="packages/inputmethods/LatinIME" />
+  <project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" remote="ext" /> -->
+
+  <!-- <remove-project path="packages/modules/Nfc" />
+  <project path="packages/modules/Nfc" name="android_packages_modules_Nfc" remote="ext" /> -->
+
+  <remove-project path="packages/services/DeviceAsWebcam" />
+  <project path="packages/services/DeviceAsWebcam" name="android_packages_services_DeviceAsWebcam" groups="pdk-cw-fs,pdk-fs" remote="ext" />
+
+  <remove-project path="system/core" />
+  <project path="system/core" name="android_system_core" remote="ext" />
+
+  <remove-project path="system/memory/libmeminfo" />
+  <project path="system/memory/libmeminfo" name="system_memory_libmeminfo" groups="pdk" remote="ext" />
+
+  <remove-project path="system/sepolicy" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="ext" />
+
+  <remove-project path="vendor/lineage" />
+  <project path="vendor/lineage" name="android_vendor_lineage" remote="ext" />
+
+  <!-- <remove-project path="vendor/qcom/opensource/vibrator" />
+  <project path="vendor/qcom/opensource/vibrator" name="android_vendor_qcom_opensource_vibrator" remote="ext" /> -->
+
+  <!-- Ext additions -->
+  <remove-project path="packages/overlays/Lineage" />
+  <remove-project path="external/google-fonts/google-sans-flex" />
+  <project path="packages/apps/FaceUnlock" name="android_packages_apps_FaceUnlock" remote="ext" />
+  <project path="vendor/addons" name="android_vendor_addons" remote="ext" />
+  <project path="vendor/support" name="android_vendor_support" remote="ext" />
+
+  <!-- MTG additions -->
+  <project path="vendor/gapps" name="vendor_gapps" remote="mtg" />
+
+  <!-- EvoX additions -->
+  <remove-project path="external/bouncycastle" />
+  <project path="external/bouncycastle" name="external_bouncycastle" remote="evo" />
+
+  <remove-project path="libcore" />
+  <project path="libcore" name="libcore" groups="pdk,sysui-studio" remote="evo" />
+
+  <project path="packages/apps/LMOFreeform" name="packages_apps_LMOFreeform" remote="evo" />
+</manifest>

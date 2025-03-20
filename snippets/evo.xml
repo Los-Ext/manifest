@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="evo"
+           fetch="https://github.com/Evolution-X"
+           revision="refs/heads/cnb" />
+
+  <!-- Track EvoX | Los Gerrit -->
+  <remove-project path="bootable/deprecated-ota" />
+  <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" remote="evo" />
+
+  <remove-project path="external/avb" />
+  <project path="external/avb" name="external_avb" remote="evo" />
+  <remove-project path="external/dng_sdk" />
+  <project path="external/dng_sdk" name="external_dng_sdk" groups="pdk" remote="evo"/>
+  <remove-project path="external/libjxl" />
+  <project path="external/libjxl" name="external_libjxl" groups="pdk" remote="evo"/>
+  <remove-project path="external/setupcompat" />
+  <project path="external/setupcompat" name="external_setupcompat" remote="evo" />
+  <remove-project path="external/v4l2_codec2" />
+  <project path="external/v4l2_codec2" name="external_v4l2_codec2" groups="pdk" remote="evo" />
+  <remove-project path="external/wpa_supplicant_8" />
+  <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="evo" />
+
+  <remove-project path="hardware/broadcom/libbt" />
+  <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" groups="pdk" remote="evo" />
+  <remove-project path="hardware/qcom/wlan" />
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" groups="qcom,qcom_wlan,pdk-qcom" remote="evo" />
+
+  <remove-project path="packages/modules/Bluetooth" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="evo" />
+  <remove-project path="packages/modules/Connectivity" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="evo" />
+  <remove-project path="packages/modules/Permission" />
+  <project path="packages/modules/Permission" name="packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" remote="evo" />
+  <remove-project path="packages/modules/Wifi" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="evo" />
+
+  <remove-project path="packages/providers/DownloadProvider" />
+  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="evo" />
+  <remove-project path="packages/providers/MediaProvider" />
+  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="evo" />
+
+  <remove-project path="packages/services/Telecomm" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="evo" />
+  <remove-project path="packages/services/Telephony" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="evo" />
+
+  <remove-project path="system/chre" />
+  <project path="system/chre" name="system_chre" groups="pdk" remote="evo" />
+  <remove-project path="system/extras" />
+  <project path="system/extras" name="system_extras" groups="pdk" remote="evo" />
+  <remove-project path="system/fs/fs_mgr" />
+  <project path="system/fs/fs_mgr" name="system_fs_fs_mgr" groups="pdk" remote="evo" />
+  <remove-project path="system/media" />
+  <project path="system/media" name="system_media" groups="pdk" remote="evo" />
+  <remove-project path="system/netd" />
+  <project path="system/netd" name="system_netd" groups="pdk" remote="evo" />
+  <remove-project path="system/security" />
+  <project path="system/security" name="system_security" groups="pdk" remote="evo" />
+  <remove-project path="system/update_engine" />
+  <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="evo" />
+  <remove-project path="system/vold" />
+  <project path="system/vold" name="system_vold" groups="pdk" remote="evo" />
+
+</manifest>

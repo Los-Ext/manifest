@@ -1103,4 +1103,6 @@
   </project>
 
   <include name="snippets/lineage.xml" />
+  <include name="snippets/evo.xml" />
+  <include name="snippets/ext.xml" />
 </manifest>
