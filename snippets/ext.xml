@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="ext"
+           fetch="https://github.com/Los-Ext"
+           revision="refs/heads/16.1" />
+
+  <remote  name="ext-gl"
+           fetch="https://gitlab.com/Los-Ext"
+           revision="refs/heads/16.1" />
+
+  <remote  name="ext-cb"
+           fetch="https://codeberg.org/Los-Ext"
+           revision="refs/heads/16.1" />
+
+  <remote  name="crdroid"
+           fetch="https://github.com/crdroidandroid"
+           revision="refs/heads/16.0-qpr1" />
+
+  <remote  name="crdroid-gl"
+           fetch="https://gitlab.com/crdroidandroid"
+           revision="refs/heads/16.0-qpr1" />
+
+  <remote  name="axion"
+           fetch="https://github.com/AxionAOSP/"
+           revision="refs/heads/lineage-23.1" />
+
+  <remote  name="yaap"
+           fetch="https://github.com/yaap"
+           revision="refs/heads/sixteen" />
+
+  <remote  name="yaap-gl"
+           fetch="https://gitlab.com/yaosp"
+           revision="refs/heads/sixteen" />
+
+  <remote  name="neoteric"
+           fetch="https://github.com/Neoteric-OS"
+           revision="refs/heads/bka" />
+
+ <!-- Remove LineageOS Forks -->
+  <remove-project path="android" />
+  <remove-project path="art" />
+  <remove-project path="bionic" />
+  <remove-project path="bootable/recovery" />
+  <remove-project path="build/make" />
+  <remove-project path="build/soong" />
+  <remove-project path="device/lineage/sepolicy" />
+  <remove-project path="external/arm-optimized-routines" />
+  <remove-project path="external/bouncycastle" />
+  <remove-project path="external/google-fonts/google-sans-flex" />
+  <remove-project path="external/jemalloc_new" />
+  <remove-project path="frameworks/av" />
+  <remove-project path="frameworks/base" />
+  <remove-project path="frameworks/libs/systemui" />
+  <remove-project path="frameworks/native" />
+  <remove-project path="lineage-sdk" />
+  <remove-project path="packages/apps/LineageParts" />
+  <remove-project path="packages/apps/Launcher3" />
+  <remove-project path="packages/apps/Settings" />
+  <remove-project path="packages/apps/SettingsIntelligence" />
+  <remove-project path="packages/apps/ThemePicker" />
+  <remove-project path="packages/inputmethods/LatinIME" />
+  <remove-project path="packages/modules/Connectivity" />
+  <remove-project path="packages/modules/StatsD" />
+  <remove-project path="packages/overlays/Lineage" />
+  <remove-project path="packages/services/DeviceAsWebcam" />
+  <remove-project path="packages/services/Telecomm" />
+  <remove-project path="system/bpf" />
+  <remove-project path="system/core" />
+  <remove-project path="system/sepolicy" />
+  <remove-project path="vendor/lineage" />
+  <remove-project path="vendor/qcom/opensource/vibrator" />
+
+ <!-- LosExt additions -->
+  <project path="build/make" name="android_build" groups="pdk,sysui-studio" remote="ext" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed,sysui-studio" remote="ext" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <project path="android" name="android_manifest" remote="ext" />
+  <project path="art" name="android_art" remote="ext" />
+  <project path="bionic" name="android_bionic" remote="ext" />
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="ext" />
+  <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="ext" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="ext" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="ext-cb" />
+  <project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" remote="ext" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="ext" />
+  <project path="lineage-sdk" name="android_lineage-sdk" remote="ext" />
+  <project path="packages/apps/GameSpace" name="android_packages_apps_GameSpace" remote="ext" />
+  <project path="packages/apps/LineageParts" name="android_packages_apps_LineageParts" remote="ext" />
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="ext" />
+  <project path="packages/apps/LMOFreeform" name="android_packages_apps_LMOFreeform" remote="ext" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="ext" />
+  <project path="packages/apps/Settings/ext" name="android_packages_apps_Settings_ext" remote="ext" />
+  <project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" remote="ext" />
+  <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" remote="ext" />
+  <project path="packages/services/OmniJaws" name="android_packages_services_OmniJaws" remote="ext" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="ext" />
+  <project path="system/bpf" name="android_system_bpf" remote="ext" />
+  <project path="system/core" name="android_system_core" remote="ext" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="ext" />
+  <project path="vendor/addons" name="android_vendor_addons" remote="ext" />
+  <project path="vendor/google/pixel" name="vendor_google_pixel" remote="ext-gl" />
+  <project path="vendor/google/gms" name="vendor_google_gms" remote="ext-gl" />
+  <project path="vendor/certification" name="android_vendor_certification" remote="ext" />
+  <project path="vendor/lineage" name="android_vendor_lineage" remote="ext" />
+  <project path="vendor/support" name="android_vendor_support" remote="ext" />
+  <project path="vendor/qcom/opensource/vibrator" name="android_vendor_qcom_opensource_vibrator" remote="ext" />
+
+ <!-- crdroid additions -->
+  <project path="external/arm-optimized-routines" name="android_external_arm-optimized-routines" groups="pdk" remote="crdroid" />
+  <project path="external/bouncycastle" name="android_external_bouncycastle" groups="pdk" remote="crdroid" />
+  <project path="packages/apps/FaceUnlock" name="android_packages_apps_FaceUnlock" remote="crdroid-gl" />
+  <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" groups="pdk-fs" remote="crdroid" />
+  <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="crdroid" />
+  <project path="packages/services/DeviceAsWebcam" name="android_packages_services_DeviceAsWebcam" groups="pdk-cw-fs,pdk-fs" remote="crdroid" />
+
+ <!-- axion additions -->
+  <project path="packages/modules/StatsD" name="android_packages_modules_StatsD" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="axion" />
+
+ <!-- neoteric additions -->
+  <project path="external/jemalloc_new" name="android_external_jemalloc-new" remote="neoteric" />
+
+</manifest>
