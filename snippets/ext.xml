@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="ext"
+           fetch="https://github.com/Los-Ext"
+           revision="refs/heads/15" />
+
+  <remote  name="ext-gl"
+           fetch="https://gitlab.com/Los-Ext"
+           revision="refs/heads/fifteen" />
+
+  <remote  name="crd"
+           fetch="https://github.com/crdroidandroid"
+           revision="refs/heads/15.0" />
+
+  <remote  name="crd-gl"
+           fetch="https://gitlab.com/crdroidandroid"
+           revision="refs/heads/15.0" />
+
+  <remote name="axn"
+          fetch="https://github.com/AxionAOSP/"
+          revision="refs/heads/lineage-22.1" />
+
+ <!-- Remove LineageOS Forks -->
+  <remove-project path="android" />
+  <remove-project path="art" />
+  <remove-project path="bionic" />
+  <remove-project path="build/bazel" />
+  <remove-project path="build/make" />
+  <remove-project path="build/soong" />
+  <remove-project path="device/lineage/sepolicy" />
+  <remove-project path="external/arm-optimized-routines" />
+  <remove-project path="external/jemalloc_new" />
+  <remove-project path="external/libjpeg-turbo" />
+  <remove-project path="external/skia" />
+  <remove-project path="external/sqlite" />
+  <remove-project path="frameworks/av" />
+  <remove-project path="frameworks/base" />
+  <remove-project path="frameworks/libs/systemui" />
+  <remove-project path="frameworks/native" />
+  <remove-project path="lineage-sdk" />
+  <remove-project path="packages/apps/LineageParts" />
+  <remove-project path="packages/apps/Settings" />
+  <remove-project path="packages/apps/Trebuchet" />
+  <remove-project path="packages/overlays/Lineage" />
+  <remove-project path="system/core" />
+  <remove-project path="system/libhwbinder" />
+  <remove-project path="system/memory/lmkd" />
+  <remove-project path="system/sepolicy" />
+  <remove-project path="toolchain/pgo-profiles" />
+  <remove-project path="vendor/lineage" />
+
+ <!-- LosExt additions -->
+  <project path="build/make" name="android_build" groups="pdk,sysui-studio" remote="ext" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="ext" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <project path="android" name="android_manifest" remote="ext" />
+  <project path="art" name="android_art" remote="ext" />
+  <project path="bionic" name="android_bionic" remote="ext" />
+  <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="ext" />
+  <project path="external/arm-optimized-routines" name="android_external_arm-optimized-routines" remote="ext" />
+  <project path="external/jemalloc_new" name="android_external_jemalloc-new" remote="ext" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="ext" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="ext" />
+  <project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" remote="ext" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="ext" />
+  <project path="lineage-sdk" name="android_lineage-sdk" remote="ext" />
+  <project path="packages/apps/GameSpace" name="android_packages_apps_GameSpace" remote="ext" />
+  <project path="packages/apps/LineageParts" name="android_packages_apps_LineageParts" remote="ext" />
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="ext" />
+  <project path="packages/apps/LMOFreeform" name="android_packages_apps_LMOFreeform" remote="ext" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="ext" />
+  <project path="packages/overlays/Lineage" name="android_packages_overlays_Lineage" remote="ext" />
+  <project path="packages/services/OmniJaws" name="android_packages_services_OmniJaws" remote="ext" />
+  <project path="system/core" name="android_system_core" remote="ext" />
+  <project path="system/memory/lmkd" name="android_system_memory_lmkd" remote="ext" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="ext" />
+  <project path="vendor/addons" name="android_vendor_addons" remote="ext" />
+  <project path="vendor/google/gms" name="vendor_google_gms" remote="ext-gl" />
+  <project path="vendor/google/pixel" name="vendor_google_pixel" remote="ext-gl" />
+  <project path="vendor/lineage" name="android_vendor_lineage" remote="ext" />
+  <project path="vendor/support" name="android_vendor_support" remote="ext" />
+
+ <!-- crdroid additions -->
+  <project path="build/bazel" name="android_build_bazel" groups="pdk" remote="crd" >
+    <linkfile src="bazel.WORKSPACE" dest="WORKSPACE" />
+    <linkfile src="bazel.BUILD" dest="BUILD" />
+  </project>
+  <project path="packages/apps/FaceUnlock" name="android_packages_apps_FaceUnlock" remote="crd-gl" />
+  <project path="toolchain/pgo-profiles" name="android_toolchain_pgo-profiles" remote="crd" />
+
+ <!-- axion additions -->
+  <project path="external/libjpeg-turbo" name="android_external_libjpeg-turbo" remote="axn" />
+  <project path="external/skia" name="android_external_skia" remote="axn" />
+  <project path="external/sqlite" name="android_external_sqlite" remote="axn" />
+  <project path="system/libhwbinder" name="android_system_libhwbinder" remote="axn" />
+
+</manifest>
