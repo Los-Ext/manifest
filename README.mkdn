@@ -6,12 +6,12 @@
 ### Initialising the Repo
 To save space, sync without history use:
 ```
- repo init --depth=1 --no-repo-verify -u https://github.com/Los-Ext/manifest.git -b 15 --git-lfs -g default,-mips,-darwin,-notdefault
+ repo init --depth=1 --no-repo-verify -u https://github.com/Los-Ext/manifest.git -b 15.2 --git-lfs -g default,-mips,-darwin,-notdefault
 ```
 
 To sync with full history use:
 ```
- repo init -u https://github.com/Los-Ext/manifest.git -b 15 --git-lfs
+ repo init -u https://github.com/Los-Ext/manifest.git -b 15.2 --git-lfs
 ```
 
 ### Sync up sources
@@ -26,12 +26,15 @@ To sync with full history use:
  mka bacon
 ```
 
-### Additional stuff (optional)
- - To build gapps add `WITH_GMS := true` flag in your `lineage_<device>.mk`
+### Optional flags & overlays
+
+**Build Gapps**
+
+- Add `WITH_GMS := true` flag in your `lineage_<device>.mk`
 
 **Maintainer Overlays**
 
- - Refer to this [change](https://github.com/ImSpiDy/device_xiaomi_lavender/commit/f4cbcc3f48c8fe9856d9f5d4e7c081461c5d6390) for maintainer  & device overlays.
+ - Refer to this [change](https://github.com/ImSpiDy/device_xiaomi_lavender/commits/15/overlay-lineage/packages/apps/Settings/res/values/ext_strings.xml) for maintainer  & device overlays.
 
 **Signed Builds**
 
