@@ -1,36 +1,54 @@
-LineageOS
-===========
+# **LineageOS - Ext**
 
-Getting started
----------------
+## **Getting Started**
 
-To get started with Android/LineageOS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
-
-To initialize your local repository using the LineageOS trees, use a command like this:
+### Initialising the Repo
+To save space, sync without history use:
 ```
-repo init -u https://github.com/LineageOS/android.git -b lineage-24.0 --git-lfs
+ repo init --depth=1 --no-repo-verify -u https://github.com/Los-Ext/android_manifest.git -b 17 --git-lfs -g default,-mips,-darwin,-notdefault
 ```
-Then to sync up:
+
+To sync with full history use:
 ```
-repo sync
+ repo init -u https://github.com/Los-Ext/android_manifest.git -b 17 --git-lfs
 ```
-Please see the [LineageOS Wiki](https://wiki.lineageos.org/) for building instructions, by device.
 
+### Sync up sources
+```
+ repo sync -c -j24 --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune
+```
 
-Submitting patches
-------------------
-Patches are always welcome! Please submit your patches via LineageOS Gerrit!
+### Build the ROM
+```
+ . build/envsetup.sh
+```
+```
+ lunch lineage_<devicecodename>-cp2a-<buildtype>
+```
+```
+ m bacon
+```
 
-Simply follow our guide on [how to submit patches](https://wiki.lineageos.org/submitting-patch-howto.html).
+## Optional changes
 
-To view the status of your and others' patches, visit [LineageOS Gerrit Code Review](https://review.lineageos.org/).
+Gapps build
 
+ - Set `WITH_GMS := true` flag in your `lineage_<device>.mk`
 
-Buildbot
---------
+Maintainer Overlays
 
-All supported devices are built weekly and periodically as changes are committed to ensure the source trees remain buildable.
+ - Use this [Overlay](https://github.com/ImSpiDy/device_xiaomi_lavender/commit/b738ad799fe6a1cca604945c1ace88018b033969) or [RRO](https://github.com/ImSpiDy/android_device_xiaomi_garnet/commit/1f71989516493bbfc11071664b0a44786c9b7b57) in your device tree
 
-You can view the current build statuses at [LineageOS Buildkite](https://buildkite.com/lineageos).
+Signed Builds
 
-Builds produced weekly by the buildbot can be downloaded from [LineageOS downloads](https://download.lineageos.org/).
+ - Clone your private keys in `vendor/lineage-priv/keys` directory and it'll do the rest.
+
+Blur Support
+
+ - Set `TARGET_ENABLE_BLUR := true` flag in your `lineage_<device>.mk`
+ - To Remove blur Support, Set `ro.surface_flinger.supports_background_blur=0`
+
+Perf animation override
+
+ - Set `PERF_ANIM_OVERRIDE := true` flag in your `lineage_<device>.mk`
+ - Useful for mtk and low-end devices which have perf regression caused by fixed dp translate and fade animation
