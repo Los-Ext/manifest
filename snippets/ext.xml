@@ -43,6 +43,7 @@
   <remove-project path="packages/overlays/Lineage" />
   <remove-project path="system/core" />
   <remove-project path="system/memory/lmkd" />
+  <remove-project path="system/sepolicy" />
   <remove-project path="toolchain/pgo-profiles" />
   <remove-project path="vendor/lineage" />
 
@@ -97,5 +98,6 @@
   <project path="packages/apps/VendorSupport" name="android_packages_apps_VendorSupport" remote="axn" />
   <project path="packages/services/OmniJaws" name="android_packages_services_OmniJaws" remote="axn" />
   <project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" remote="axn" />
+  <project path="system/sepolicy" name="android_system_sepolicy" groups="pdk" remote="axn" />
 
 </manifest>
