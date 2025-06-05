@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <!-- Device -->
+  <remove-project name="device/common"/>
+  <remove-project name="device/generic/arm64"/>
+  <remove-project name="device/generic/armv7-a-neon"/>
+  <remove-project name="device/generic/art"/>
+  <remove-project name="device/generic/car"/>
+  <remove-project name="device/generic/mini-emulator-arm64"/>
+  <remove-project name="device/generic/mini-emulator-armv7-a-neon"/>
+  <remove-project name="device/generic/mini-emulator-x86"/>
+  <remove-project name="device/generic/mini-emulator-x86_64"/>
+  <remove-project name="device/generic/trusty"/>
+  <remove-project name="device/generic/x86"/>
+  <remove-project name="device/generic/x86_64"/>
+  <remove-project name="device/google_car"/>
+  <remove-project name="device/sample"/>
+  <remove-project name="LineageOS/android_device_generic_common"/>
+  <remove-project name="LineageOS/android_device_google_atv"/>
+  <remove-project name="LineageOS/android_device_lineage_atv"/>
+  <remove-project name="LineageOS/android_device_lineage_car"/>
+
   <!-- Prebuilts -->
   <remove-project name="kernel/prebuilts/6.1/arm64" />
   <remove-project name="kernel/prebuilts/6.1/x86-64" />
