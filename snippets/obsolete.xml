@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Prebuilts -->
+  <remove-project name="kernel/prebuilts/6.1/arm64" />
+  <remove-project name="kernel/prebuilts/6.1/x86-64" />
+  <remove-project name="kernel/prebuilts/mainline/arm64" />
+  <remove-project name="kernel/prebuilts/mainline/x86-64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/6.1/arm64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/6.1/x86-64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/6.6/arm64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/6.6/x86-64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/mainline/arm64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/mainline/x86-64" />
+
+</manifest>
