@@ -12,5 +12,10 @@
   <remove-project name="kernel/prebuilts/common-modules/virtual-device/6.6/x86-64" />
   <remove-project name="kernel/prebuilts/common-modules/virtual-device/mainline/arm64" />
   <remove-project name="kernel/prebuilts/common-modules/virtual-device/mainline/x86-64" />
+  <remove-project name="platform/prebuilts/android-emulator" />
+  <remove-project name="platform/prebuilts/bazel/darwin-x86_64" />
+  <remove-project name="platform/prebuilts/clang/host/darwin-x86" />
+  <remove-project name="platform/prebuilts/go/darwin-x86"  />
+  <remove-project name="platform/prebuilts/qemu-kernel" />
 
 </manifest>
