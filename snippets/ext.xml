@@ -5,6 +5,10 @@
            fetch="https://github.com/Los-Ext"
            revision="refs/heads/15.2" />
 
+  <remote  name="test"
+           fetch="https://github.com/Los-Ext"
+           revision="refs/heads/test" />
+
   <remote  name="ext-gl"
            fetch="https://gitlab.com/Los-Ext"
            revision="refs/heads/fifteen" />
@@ -61,7 +65,7 @@
     <linkfile src="tools" dest="build/tools" />
   </project>
 
-  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed,sysui-studio" remote="ext" >
+  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed,sysui-studio" remote="test" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
