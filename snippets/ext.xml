@@ -47,6 +47,7 @@
   <remove-project path="packages/apps/Settings" />
   <remove-project path="packages/apps/ThemePicker" />
   <remove-project path="packages/modules/Connectivity" />
+  <remove-project path="packages/modules/StatsD" />
   <remove-project path="packages/overlays/Lineage" />
   <remove-project path="system/bpf" />
   <remove-project path="system/core" />
@@ -95,6 +96,7 @@
 
  <!-- axion additions -->
   <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="axn" />
+  <project path="packages/modules/StatsD" name="android_packages_modules_StatsD" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="axn" />
   <project path="system/bpf" name="android_system_bpf" groups="pdk" remote="axn" />
   <project path="system/sepolicy" name="android_system_sepolicy" groups="pdk" remote="axn" />
 
