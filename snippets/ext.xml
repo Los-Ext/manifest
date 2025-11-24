@@ -95,6 +95,7 @@
   <project path="vendor/support" name="android_vendor_support" remote="ext" />
 
  <!-- crdroid additions -->
+  <project path="external/arm-optimized-routines" name="android_external_arm-optimized-routines" remote="crdroid" />
   <project path="packages/apps/FaceUnlock" name="android_packages_apps_FaceUnlock" remote="crdroid-gl" />
   <project path="packages/apps/LMOSystemUIClock" name="android_packages_apps_LMOSystemUIClock" remote="crdroid" />
   <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="crdroid" />
@@ -106,7 +107,6 @@
   <project path="system/sepolicy" name="android_system_sepolicy" groups="pdk" remote="axn" />
 
  <!-- yaap additions -->
-  <project path="external/arm-optimized-routines" name="external_arm-optimized-routines" remote="yaap" />
   <project path="vendor/google/gms" name="vendor_google_gms" remote="yaap-gl" />
 
  <!-- neoteric additions -->
