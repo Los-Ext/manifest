@@ -29,6 +29,10 @@
            fetch="https://gitlab.com/yaosp"
            revision="refs/heads/sixteen" />
 
+  <remote  name="neoteric"
+           fetch="https://github.com/Neoteric-OS"
+           revision="refs/heads/bka" />
+
  <!-- Remove LineageOS Forks -->
   <remove-project path="android" />
   <remove-project path="art" />
@@ -37,6 +41,7 @@
   <remove-project path="build/soong" />
   <remove-project path="device/lineage/sepolicy" />
   <remove-project path="external/arm-optimized-routines" />
+  <remove-project path="external/jemalloc_new" />
   <remove-project path="frameworks/av" />
   <remove-project path="frameworks/base" />
   <remove-project path="frameworks/libs/systemui" />
@@ -103,5 +108,8 @@
  <!-- yaap additions -->
   <project path="external/arm-optimized-routines" name="external_arm-optimized-routines" remote="yaap" />
   <project path="vendor/google/gms" name="vendor_google_gms" remote="yaap-gl" />
+
+ <!-- neoteric additions -->
+  <project path="external/jemalloc_new" name="android_external_jemalloc-new" remote="neoteric" />
 
 </manifest>
