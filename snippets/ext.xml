@@ -59,6 +59,7 @@
   <remove-project path="system/core" />
   <remove-project path="system/sepolicy" />
   <remove-project path="vendor/lineage" />
+  <remove-project path="vendor/qcom/opensource/vibrator" />
 
  <!-- LosExt additions -->
   <project path="build/make" name="android_build" groups="pdk,sysui-studio" remote="ext" >
@@ -95,6 +96,7 @@
   <project path="vendor/certification" name="android_vendor_certification" remote="ext" />
   <project path="vendor/lineage" name="android_vendor_lineage" remote="ext" />
   <project path="vendor/support" name="android_vendor_support" remote="ext" />
+  <project path="vendor/qcom/opensource/vibrator" name="android_vendor_qcom_opensource_vibrator" remote="ext" />
 
  <!-- crdroid additions -->
   <project path="external/arm-optimized-routines" name="android_external_arm-optimized-routines" remote="crdroid" />
