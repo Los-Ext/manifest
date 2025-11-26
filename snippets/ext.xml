@@ -88,6 +88,7 @@
   <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="ext" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="ext" />
   <project path="system/core" name="android_system_core" remote="ext" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="ext" />
   <project path="vendor/addons" name="android_vendor_addons" remote="ext" />
   <project path="vendor/google/pixel" name="vendor_google_pixel" remote="ext-gl" />
   <project path="vendor/certification" name="android_vendor_certification" remote="ext" />
@@ -104,7 +105,6 @@
   <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="axn" />
   <project path="packages/modules/StatsD" name="android_packages_modules_StatsD" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="axn" />
   <project path="system/bpf" name="android_system_bpf" groups="pdk" remote="axn" />
-  <project path="system/sepolicy" name="android_system_sepolicy" groups="pdk" remote="axn" />
 
  <!-- yaap additions -->
   <project path="vendor/google/gms" name="vendor_google_gms" remote="yaap-gl" />
