@@ -37,6 +37,7 @@
   <remove-project path="android" />
   <remove-project path="art" />
   <remove-project path="bionic" />
+  <remove-project path="bootable/recovery" />
   <remove-project path="build/make" />
   <remove-project path="build/soong" />
   <remove-project path="device/lineage/sepolicy" />
@@ -79,6 +80,7 @@
   <project path="android" name="android_manifest" remote="ext" />
   <project path="art" name="android_art" remote="ext" />
   <project path="bionic" name="android_bionic" remote="ext" />
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="ext" />
   <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="ext" />
   <project path="frameworks/av" name="android_frameworks_av" remote="ext" />
   <project path="frameworks/base" name="android_frameworks_base-16" remote="ext" />
