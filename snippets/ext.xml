@@ -96,6 +96,7 @@
   <project path="system/sepolicy" name="android_system_sepolicy" remote="ext" />
   <project path="vendor/addons" name="android_vendor_addons" remote="ext" />
   <project path="vendor/google/pixel" name="vendor_google_pixel" remote="ext-gl" />
+  <project path="vendor/google/gms" name="vendor_google_gms" remote="ext-gl" />
   <project path="vendor/certification" name="android_vendor_certification" remote="ext" />
   <project path="vendor/lineage" name="android_vendor_lineage" remote="ext" />
   <project path="vendor/support" name="android_vendor_support" remote="ext" />
@@ -110,9 +111,6 @@
  <!-- axion additions -->
   <project path="packages/modules/StatsD" name="android_packages_modules_StatsD" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="axn" />
   <project path="system/bpf" name="android_system_bpf" groups="pdk" remote="axn" />
-
- <!-- yaap additions -->
-  <project path="vendor/google/gms" name="vendor_google_gms" remote="yaap-gl" />
 
  <!-- neoteric additions -->
   <project path="external/jemalloc_new" name="android_external_jemalloc-new" remote="neoteric" />
