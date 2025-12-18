@@ -56,6 +56,7 @@
   <remove-project path="packages/modules/StatsD" />
   <remove-project path="packages/overlays/Lineage" />
   <remove-project path="packages/services/DeviceAsWebcam" />
+  <remove-project path="packages/services/Telecomm" />
   <remove-project path="system/bpf" />
   <remove-project path="system/core" />
   <remove-project path="system/sepolicy" />
@@ -93,6 +94,7 @@
   <project path="packages/apps/LMOFreeform" name="android_packages_apps_LMOFreeform" remote="ext" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="ext" />
   <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" remote="ext" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="ext" />
   <project path="system/core" name="android_system_core" remote="ext" />
   <project path="system/sepolicy" name="android_system_sepolicy" remote="ext" />
   <project path="vendor/addons" name="android_vendor_addons" remote="ext" />
