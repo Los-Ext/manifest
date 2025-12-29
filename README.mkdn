@@ -16,7 +16,7 @@ To sync with full history use:
 
 ### Sync up sources
 ```
- repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune
+ repo sync -c j24 --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune
 ```
 
 ### Build the ROM
