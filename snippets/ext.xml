@@ -61,6 +61,8 @@
   <remove-project path="packages/apps/ThemePicker" />
   <remove-project path="packages/inputmethods/LatinIME" />
   <remove-project path="packages/modules/Connectivity" />
+  <remove-project path="packages/modules/Nfc" />
+  <remove-project path="packages/modules/Permission" />
   <remove-project path="packages/modules/StatsD" />
   <remove-project path="packages/overlays/Lineage" />
   <remove-project path="packages/services/DeviceAsWebcam" />
@@ -104,6 +106,8 @@
   <project path="packages/apps/Settings/ext" name="android_packages_apps_Settings_ext" remote="ext" />
   <project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" remote="ext" />
   <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" remote="ext" />
+  <project path="packages/modules/Nfc" name="android_packages_modules_Nfc" remote="ext" />
+  <project path="packages/modules/Permission" name="android_packages_modules_Permission" remote="ext" />
   <project path="packages/services/OmniJaws" name="android_packages_services_OmniJaws" remote="ext" />
   <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="ext" />
   <project path="system/bpf" name="android_system_bpf" remote="ext" />
