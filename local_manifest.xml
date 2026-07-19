@@ -5,4 +5,7 @@
            fetch="https://github.com/Los-Ext"
            revision="refs/heads/17" />
 
+  <remove-project path="frameworks/base" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="ext" />
+
 </manifest>
