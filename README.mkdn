@@ -1,0 +1,8 @@
+# **LineageOS - Ext - Staging**
+
+## Test repo/branch
+
+### 
+```
+ rm -rf .repo/local_manifests; git clone --depth=1 https://github.com/Los-Ext/android_manifest.git -b staging .repo/local_manifests
+```
