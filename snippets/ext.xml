@@ -99,6 +99,9 @@
   <remove-project path="packages/services/DeviceAsWebcam" />
   <project path="packages/services/DeviceAsWebcam" name="android_packages_services_DeviceAsWebcam" groups="pdk-cw-fs,pdk-fs" remote="ext" />
 
+  <remove-project path="packages/services/Telecomm" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="ext" />
+
   <remove-project path="system/core" />
   <project path="system/core" name="android_system_core" remote="ext" />
 
